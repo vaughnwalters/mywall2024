@@ -48,22 +48,32 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             const sectionId = this.getAttribute('data-section');
             showSection(sectionId);
+
+            // Close the slide-out menu on small screens
+            if (window.innerWidth <= 768) {
+                document.getElementById('hamburger').classList.remove('active');
+                document.querySelector('#slide-out-header nav').classList.remove('active');
+            }
         });
     });
 
     homeLink.addEventListener('click', function(event) {
         event.preventDefault();
         showSection('photo-slides');
+        
+        // Close the slide-out menu on small screens
+        if (window.innerWidth <= 768) {
+            document.getElementById('hamburger').classList.remove('active');
+            document.querySelector('#slide-out-header nav').classList.remove('active');
+        }
     });
-
-    // Show the initial section
-    showSection('photo-slides');
 
     // Hamburger menu toggle
     const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('#slide-out-header nav');
     hamburger.addEventListener('click', function() {
         this.classList.toggle('active');
-        document.querySelector('header nav').classList.toggle('active');
+        nav.classList.toggle('active');
     });
 
     console.log('website by hans.')

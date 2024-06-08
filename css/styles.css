@@ -45,8 +45,8 @@ a:hover {
     pointer-events: none;
 }
 
-/* Header Styles */
-header {
+/* Full-width Header Styles */
+#full-width-header {
     background-color: #010101;
     position: fixed;
     top: 0;
@@ -54,30 +54,72 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     padding: 10px 0;
+    text-align: center; /* Center all text */
 }
-.header-content {
+#full-width-header .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-header .logo {
+#full-width-header .logo {
     width: 200px; /* Adjust logo size */
     height: auto;
     margin-bottom: 10px;
 }
-header nav {
+#full-width-header nav {
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
-.hamburger {
-    display: none;
+
+/* Slide-out Header Styles */
+#slide-out-header {
+    display: none; /* Initially hidden */
+}
+#slide-out-header .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Align items in the center */
+    padding: 0 10px;
+}
+#slide-out-header .logo {
+    width: 150px; /* Adjust logo size */
+    margin-bottom: 0;
+}
+#slide-out-header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #010101;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    height: calc(100vh - 60px); /* Full height minus header height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+#slide-out-header nav.active {
+    transform: translateX(0);
+    z-index: 10;
+}
+#slide-out-header nav a {
+    padding: 10px;
+}
+#slide-out-header .hamburger {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
     height: 20px;
     cursor: pointer;
 }
-.hamburger .bar {
+#slide-out-header .hamburger .bar {
     width: 100%;
     height: 4px;
     background-color: #9500FF;
@@ -183,33 +225,10 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 10px;
+    #full-width-header {
+        display: none; /* Hide full-width header */
     }
-    header .logo {
-        width: 150px; /* Adjust logo size */
-        margin-bottom: 0;
-    }
-    header nav {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #010101;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-    header nav a {
-        padding: 10px;
-    }
-    .hamburger {
-        display: flex;
-    }
-    .hamburger.active + nav {
-        display: flex;
+    #slide-out-header {
+        display: block; /* Show slide-out header */
     }
 }
