@@ -6,6 +6,9 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Prevent scrolling during initial animation */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 h1, h2, h3 {
     color: #512EFF;
@@ -84,7 +87,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; /* Align items in the center */
-    padding: 0 10px;
+    padding: 10px;
 }
 #slide-out-header .logo {
     width: 150px; /* Adjust logo size */
@@ -133,6 +136,7 @@ a:hover {
     text-align: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    flex: 1; /* Allow the container to grow and fill the remaining space */
 }
 .container.visible {
     display: block;
@@ -204,9 +208,11 @@ footer {
     text-align: center;
     padding: 20px 0;
     border-top: 1px solid #512EFF;
-    margin-top: 40px;
+    margin-top: auto;
     font-size: 0.9em;
     color: #777;
+    width: 100%;
+    background-color: #010101; /* Background color */
 }
 .social-icons {
     display: flex;
@@ -217,11 +223,13 @@ footer {
 .social-icon {
     height: 24px;
     width: 24px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, text-decoration 0.3s;
 }
 .social-icon:hover {
-    transform: scale(1.2);
+    text-decoration: underline;
+    transform: none; /* Remove scaling effect */
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -231,4 +239,21 @@ footer {
     #slide-out-header {
         display: block; /* Show slide-out header */
     }
+}
+
+/* Video Styles */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

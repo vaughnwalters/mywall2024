@@ -6,6 +6,7 @@
     <title>My Wall</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/LogoCool-01.svg" type="image/svg+xml">
 </head>
 <body>
     <div id="initial-logo">
@@ -38,31 +39,32 @@
     <!-- Full-width Header -->
     <header id="full-width-header">
         <div class="header-content">
-            <img src="assets/TextWarm-04.svg" alt="My Wall" class="logo">
+            <a href="index.html"><img src="assets/TextWarm-04.svg" alt="My Wall" class="logo"></a>
             <nav>
-                <a href="#" data-section="music">Music</a>
+                <a href="https://mywall.bandcamp.com/music" target="_blank">Music</a>
                 <a href="#" data-section="shows">Shows</a>
                 <a href="#" data-section="videos">Videos</a>
             </nav>
         </div>
     </header>
 
-    <!-- Slide-out Header -->
-    <header id="slide-out-header">
-        <div class="header-content">
-            <a href="#" id="home-link"><img src="assets/TextWarm-04.svg" alt="My Wall" class="logo"></a>
-            <div class="hamburger" id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <nav>
-                <a href="#" data-section="music">Music</a>
-                <a href="#" data-section="shows">Shows</a>
-                <a href="#" data-section="videos">Videos</a>
-            </nav>
+
+<!-- Slide-out Header -->
+<header id="slide-out-header">
+    <div class="header-content">
+        <a href="index.html" id="home-link"><img src="assets/TextWarm-04.svg" alt="My Wall" class="logo"></a>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-    </header>
+        <nav>
+            <a href="https://mywall.bandcamp.com/music" target="_blank">Music</a>
+            <a href="#" data-section="shows">Shows</a>
+            <a href="#" data-section="videos">Videos</a>
+        </nav>
+    </div>
+</header>
 
     <div class="container">
         <section class="section active" id="photo-slides">
@@ -82,21 +84,20 @@
             <img src="assets/LogoCool-01.svg" alt="Logo" class="main-logo">
         </section>
         <section class="section" id="music">
-            <h2>Music</h2>
-            <p>(Music content placeholder)</p>
+            <p><a href="https://mywall.bandcamp.com/music" target="_blank">Listen to our music on Bandcamp</a></p>
         </section>
         <section class="section" id="shows">
-            <h2>Shows</h2>
             <p>(Shows content placeholder)</p>
         </section>
         <section class="section" id="videos">
-            <h2>Videos</h2>
-            <p>(Videos content placeholder)</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/_Pz7__nZbyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
         <footer>
             <div class="social-icons">
-                <a href="https://open.spotify.com/artist/7d7jKX1PCptWpV29HSfmaD?si=F6LWpCBiRqOL6YtSJ9Zu9Q" target="_blank"><img src="assets/Spotify_icon.svg" alt="Spotify" class="social-icon"></a>
-                <a href="https://instagram.com/mywallband" target="_blank"><img src="assets/Instagram_icon.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://open.spotify.com/artist/7d7jKX1PCptWpV29HSfmaD?si=F6LWpCBiRqOL6YtSJ9Zu9Q" target="_blank"><img src="assets/spotify.svg" alt="Spotify" class="social-icon"></a>
+                <a href="https://instagram.com/mywallband" target="_blank"><img src="assets/instagram.svg" alt="Instagram" class="social-icon"></a>
                 <a href="https://bandcamp.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111587.png" alt="Bandcamp" class="social-icon"></a>
             </div>
         </footer>

@@ -45,14 +45,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault();
             const sectionId = this.getAttribute('data-section');
-            showSection(sectionId);
+            if (sectionId) {
+                event.preventDefault();
+                showSection(sectionId);
 
-            // Close the slide-out menu on small screens
-            if (window.innerWidth <= 768) {
-                document.getElementById('hamburger').classList.remove('active');
-                document.querySelector('#slide-out-header nav').classList.remove('active');
+                // Close the slide-out menu on small screens
+                if (window.innerWidth <= 768) {
+                    document.getElementById('hamburger').classList.remove('active');
+                    document.querySelector('#slide-out-header nav').classList.remove('active');
+                }
             }
         });
     });
@@ -75,6 +77,18 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle('active');
         nav.classList.toggle('active');
     });
+    
+    document.addEventListener('click', function(event) {
+        const nav = document.querySelector('#slide-out-header nav');
+        const hamburger = document.getElementById('hamburger');
 
-    console.log('website by hans.')
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    console.log('website by hans');
+
+    console.log('website by hans')
 });
