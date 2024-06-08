@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Logo</title>
+    <style>
+        body {
+            background-color: #010101;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        svg {
+            width: 800px; /* Adjust as needed */
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="800px" height="800px" viewBox="0 0 800 800" enable-background="new 0 0 800 800" xml:space="preserve">
+        <defs>
+            <clipPath id="reveal">
+                <rect x="0" y="800" width="800" height="800">
+                    <animate attributeName="y" from="800" to="0" dur="2s" fill="freeze" />
+                </rect>
+            </clipPath>
+        </defs>
+        <rect fill="#010101" width="800.197" height="800"/>
+        <g clip-path="url(#reveal)">
+            <polygon fill="#612EFF" points="783.414,528.593 16.587,748.041 16.587,532.564 783.414,313.117"/>
+            <polygon fill="#612EFF" points="245.57,251.072 709.15,113.727 709.15,281.588 651.13,297.489"/>
+            <polygon fill="#612EFF" points="639.304,325.381 92.397,264.563 92.397,475.887"/>
+            <polygon fill="#612EFF" points="544.588,130.695 245.57,97.444 245.57,219.217"/>
+        </g>
+        <!-- Outline of the logo -->
+        <g>
+            <polygon fill="none" stroke="#612EFF" stroke-width="1" points="783.414,528.593 16.587,748.041 16.587,532.564 783.414,313.117"/>
+            <polygon fill="none" stroke="#612EFF" stroke-width="1" points="245.57,251.072 709.15,113.727 709.15,281.588 651.13,297.489"/>
+            <polygon fill="none" stroke="#612EFF" stroke-width="1" points="639.304,325.381 92.397,264.563 92.397,475.887"/>
+            <polygon fill="none" stroke="#612EFF" stroke-width="1" points="544.588,130.695 245.57,97.444 245.57,219.217"/>
+        </g>
+    </svg>
+</body>
+</html>

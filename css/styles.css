@@ -1,0 +1,215 @@
+/* General Styles */
+body {
+    background-color: #010101;
+    color: #ffffff;
+    font-family: 'Archivo', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling during initial animation */
+}
+h1, h2, h3 {
+    color: #512EFF;
+    font-family: 'Archivo Black', sans-serif;
+}
+a {
+    color: #9500FF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Initial Logo Styles */
+#initial-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    z-index: 2000;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+#initial-logo svg {
+    width: 50%;
+    height: auto;
+}
+
+/* Fade Out Animation */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #010101;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .logo {
+    width: 200px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 10px;
+}
+header nav {
+    display: flex;
+    gap: 30px;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+.hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #9500FF;
+}
+
+/* Container Styles */
+.container {
+    display: none;
+    margin-top: 100px; /* Adjust margin to ensure content starts below the header */
+    padding: 20px 40px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.container.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 60px;
+    display: none; /* Hide sections by default */
+}
+.section.active {
+    display: block; /* Show active section */
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
+    border: none; /* No border */
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Main Logo */
+.main-logo {
+    max-width: 50%; /* Adjust the size of the logo */
+    height: auto;
+    margin: 20px auto;
+    display: block; /* Ensure the logo is displayed */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #512EFF;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.social-icon {
+    height: 24px;
+    width: 24px;
+    transition: transform 0.3s;
+}
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    header .logo {
+        width: 150px; /* Adjust logo size */
+        margin-bottom: 0;
+    }
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #010101;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    header nav a {
+        padding: 10px;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .hamburger.active + nav {
+        display: flex;
+    }
+}
