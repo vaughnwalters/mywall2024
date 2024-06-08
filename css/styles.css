@@ -151,7 +151,7 @@ img {
 
 /* Main Logo */
 .main-logo {
-    max-width: 50%; /* Adjust the size of the logo */
+    max-width: 25%; /* Adjust the size of the logo */
     height: auto;
     margin: 20px auto;
     display: block; /* Ensure the logo is displayed */
