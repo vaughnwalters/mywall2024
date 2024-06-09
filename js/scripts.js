@@ -88,5 +88,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    console.log('if anything looks fucked up on your device, let me know - vaughnwalters@gmail.com');
 });
