@@ -88,7 +88,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    console.log('website by hans');
-
-    console.log('website by hans')
+    console.log('if anything looks fucked up on your device, let me know - vaughnwalters@gmail.com');
 });
