@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const initialLogo = document.getElementById('initial-logo');
         initialLogo.classList.add('hidden');
-        document.body.style.overflow = 'auto'; // Enable scrolling after initial animation
+        document.body.style.overflowY = 'auto'; // Enable vertical scrolling
+        document.body.style.overflowX = 'hidden'; // Prevent horizontal scrolling
 
         setTimeout(() => {
             initialLogo.style.display = 'none';
