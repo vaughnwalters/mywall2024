@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Wall</title>
+    <meta name="description" content="Welcome to the website of My Wall - a heavy band from Nashville, Tennessee. Come for the loud jams, stay for the coconut lacroix.">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/LogoCool-01.svg" type="image/svg+xml">
@@ -39,55 +40,56 @@
     <!-- Full-width Header -->
     <header id="full-width-header">
         <div class="header-content">
-            <a href="index.html"><img src="assets/TextWarm-04.svg" alt="My Wall" class="logo"></a>
+            <a href="index.html"><img src="assets/TextWarm-04.svg" alt="My Wall Logo" class="logo"></a>
             <nav>
                 <a href="https://mywall.bandcamp.com/music" target="_blank">Music</a>
-                <a href="#" data-section="shows">Shows</a>
-                <a href="#" data-section="videos">Videos</a>
+                <a href="#shows" data-section="shows">Shows</a>
+                <a href="#videos" data-section="videos">Videos</a>
             </nav>
         </div>
     </header>
 
-
-<!-- Slide-out Header -->
-<header id="slide-out-header">
-    <div class="header-content">
-        <a href="index.html" id="home-link"><img src="assets/TextWarm-04.svg" alt="My Wall" class="logo"></a>
-        <div class="hamburger" id="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <!-- Slide-out Header -->
+    <header id="slide-out-header">
+        <div class="header-content">
+            <a href="index.html" id="home-link"><img src="assets/TextWarm-04.svg" alt="My Wall Logo" class="logo"></a>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <a href="https://mywall.bandcamp.com/music" target="_blank">Music</a>
+                <a href="#shows" data-section="shows">Shows</a>
+                <a href="#videos" data-section="videos">Videos</a>
+            </nav>
         </div>
-        <nav>
-            <a href="https://mywall.bandcamp.com/music" target="_blank">Music</a>
-            <a href="#" data-section="shows">Shows</a>
-            <a href="#" data-section="videos">Videos</a>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <div class="container">
         <section class="section active" id="photo-slides">
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                    <img src="assets/IMG_7206.jpg" style="width:100%">
+                    <img src="assets/IMG_7206.jpg" alt="Band Photo 1" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                    <img src="assets/IMG_7206.jpg" style="width:100%">
+                    <img src="assets/IMG_7206.jpg" alt="Band Photo 2" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                    <img src="assets/IMG_7206.jpg" style="width:100%">
+                    <img src="assets/IMG_7206.jpg" alt="Band Photo 3" style="width:100%">
                 </div>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <img src="assets/LogoCool-01.svg" alt="Logo" class="main-logo">
+            <img src="assets/LogoCool-01.svg" alt="My Wall Logo" class="main-logo">
         </section>
         <section class="section" id="music">
             <p><a href="https://mywall.bandcamp.com/music" target="_blank">Listen to our music on Bandcamp</a></p>
         </section>
         <section class="section" id="shows">
-            <a href="https://www.songkick.com/artists/9902729" class="songkick-widget" data-theme="dark" data-track-button="off" data-detect-style="off" data-background-color="rgb(1,1,1,1)" data-font-color="rgb(149,0,255,1)" data-button-bg-color="rgb(1,1,1,1)" data-button-text-color="rgb(149,0,255,1)" data-locale="en" data-other-artists="on" data-share-button="off" data-country-filter="off" data-rsvp="off" data-request-show="off" data-past-events="off" data-past-events-offtour="off" data-remind-me="off" style="display: none;"></a><script src='//widget-app.songkick.com/injector/9902729'></script>        </section>
+            <a href="https://www.songkick.com/artists/9902729" class="songkick-widget" data-theme="dark" data-track-button="off" data-detect-style="off" data-background-color="rgb(1,1,1,1)" data-font-color="rgb(149,0,255,1)" data-button-bg-color="rgb(1,1,1,1)" data-button-text-color="rgb(149,0,255,1)" data-locale="en" data-other-artists="on" data-share-button="off" data-country-filter="off" data-rsvp="off" data-request-show="off" data-past-events="off" data-past-events-offtour="off" data-remind-me="off" style="display: none;"></a>
+            <script src='//widget-app.songkick.com/injector/9902729'></script>
+        </section>
         <section class="section" id="videos">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/_Pz7__nZbyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
