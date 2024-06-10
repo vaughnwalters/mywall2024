@@ -249,6 +249,7 @@ footer {
     overflow: hidden;
     max-width: 100%;
     background: #000;
+    margin: 20px 0; /* Add margin around the videos */
 }
 .video-container iframe {
     position: absolute;
