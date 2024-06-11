@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Wall</title>
     <meta name="description" content="The official website for My Wall, a heavy band from Nashville Tennessee.">
+    <meta name="keywords" content="My Wall, heavy band, Nashville, Tennessee, music, live shows, rock band, My Wall music, My Wall shows, band from Nashville, My Wall videos, doom punk, noise meditation, metal band">
+    <meta name="author" content="My Wall">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/LogoCool-01.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "My Wall",
+      "url": "https://mywallband.com",
+      "sameAs": [
+        "https://open.spotify.com/artist/7d7jKX1PCptWpV29HSfmaD",
+        "https://instagram.com/mywallband",
+        "https://mywall.bandcamp.com/music"
+      ],
+      "image": "https://mywallband.com/assets/LogoCool-01.svg",
+      "description": "The official website for My Wall, a heavy band from Nashville Tennessee.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nashville",
+        "addressRegion": "TN",
+        "addressCountry": "US"
+      }
+    }
+    </script>
 </head>
 <body>
     <div id="initial-logo">
@@ -81,7 +104,7 @@
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <img src="assets/LogoCool-01.svg" alt="My Wall Logo" class="main-logo">
+            <img src="assets/LogoCool-01.svg" alt="My Wall Main Logo" class="main-logo">
         </section>
         <section class="section" id="music">
             <p><a href="https://mywall.bandcamp.com/music" target="_blank">Listen to our music on Bandcamp</a></p>
@@ -102,7 +125,6 @@
             <div class="social-icons">
                 <a href="https://open.spotify.com/artist/7d7jKX1PCptWpV29HSfmaD?si=F6LWpCBiRqOL6YtSJ9Zu9Q" target="_blank"><img src="assets/spotify.svg" alt="Spotify" class="social-icon"></a>
                 <a href="https://instagram.com/mywallband" target="_blank"><img src="assets/instagram.svg" alt="Instagram" class="social-icon"></a>
-                <!-- <a href="https://bandcamp.com" target="_blank"><img src="" alt="Bandcamp" class="social-icon"></a> -->
             </div>
         </footer>
     </div>
