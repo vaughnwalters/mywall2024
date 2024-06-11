@@ -185,6 +185,7 @@ img {
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
     border: none; /* No border */
+    display:none; /* Hide until >1 photos in carousel */
 }
 .next {
     right: 0;
