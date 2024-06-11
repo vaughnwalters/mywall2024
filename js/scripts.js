@@ -89,4 +89,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Typing event to trigger LaCroix overlay
+    let typedSequence = '';
+
+    document.addEventListener('keyup', function(event) {
+        typedSequence += event.key.toLowerCase();
+
+        if (typedSequence.includes('die')) {
+            const overlay = document.getElementById('lacroix-overlay');
+            const lacroixImage = document.getElementById('lacroix-image');
+            lacroixImage.classList.add('spin');
+            overlay.classList.add('show');
+
+            setTimeout(() => {
+                lacroixImage.classList.remove('spin');
+                setTimeout(() => {
+                    overlay.classList.remove('show');
+                    typedSequence = ''; // Reset the sequence
+                }, 2000);
+            }, 1000);  // Duration matches the spin animation
+        }
+
+        // Keep the last 3 characters in the sequence
+        if (typedSequence.length > 3) {
+            typedSequence = typedSequence.slice(-3);
+        }
+    });
 });
