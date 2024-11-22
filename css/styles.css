@@ -137,6 +137,9 @@ a:hover {
     opacity: 0;
     transition: opacity 1s ease-in-out;
     flex: 1; /* Allow the container to grow and fill the remaining space */
+    @media (max-width: 768px) {
+        margin-top:0px;
+    }
 }
 .container.visible {
     display: block;
